@@ -1,6 +1,6 @@
 {
   "name": "hexlet-project02-by-rastler",
-  "version": "0.7.1",
+  "version": "0.7.3",
   "description": "Utility for training at hexlet.io",
   "main": "dist/index.js",
   "bin": {

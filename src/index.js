@@ -3,7 +3,7 @@ import path from 'path';
 import _ from 'lodash';
 import yaml from 'js-yaml';
 import ini from 'ini';
-import getRender from './renders';
+import getRender from './renderers';
 
 const selectParseFn = {
   '.json': JSON.parse,
