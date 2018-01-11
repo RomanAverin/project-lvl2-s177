@@ -10,9 +10,9 @@ const selectParseFn = {
   '.yml': yaml.safeLoad,
   '.ini': ini.decode,
 };
-const process = (pointer, fileType) => {
+const processingFile = (pointerToFile, fileType) => {
   const parseFn = selectParseFn[fileType];
-  return parseFn(pointer);
+  return parseFn(pointerToFile);
 };
 
 const types = [
@@ -61,8 +61,8 @@ const generateAst = (obj1, obj2) => {
 export default (pathToFile1, pathToFile2, format = 'visual') => {
   const pointerFile1 = readFileSync(pathToFile1, 'utf-8');
   const pointerFile2 = readFileSync(pathToFile2, 'utf-8');
-  const obj1 = process(pointerFile1, path.extname(pathToFile1));
-  const obj2 = process(pointerFile2, path.extname(pathToFile2));
+  const obj1 = processingFile(pointerFile1, path.extname(pathToFile1));
+  const obj2 = processingFile(pointerFile2, path.extname(pathToFile2));
   const ast = generateAst(obj1, obj2);
   const render = getRender(format);
   return render(ast);
