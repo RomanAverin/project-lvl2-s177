@@ -5,7 +5,7 @@ usage:
 run:
 	npm run babel-node -- src/bin/gendiff.js
 test-run:
-	npm run babel-node -- src/bin/gendiff.js -f plain __tests__/__fixtures__/befor.json __tests__/__fixtures__/after.json
+	npm run babel-node -- src/bin/gendiff.js -f json __tests__/__fixtures__/befor.json __tests__/__fixtures__/after.json
 build:
 	npm run build
 publish:
@@ -13,5 +13,5 @@ publish:
 lint:
 	npm run eslint .
 test:
-	npm test
+	npm run test -- --watch
 

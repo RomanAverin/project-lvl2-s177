@@ -1,6 +1,6 @@
 {
   "name": "hexlet-project02-by-rastler",
-  "version": "0.7.3",
+  "version": "0.8.0",
   "description": "Utility for training at hexlet.io",
   "main": "dist/index.js",
   "bin": {
@@ -28,7 +28,7 @@
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.0",
-    "babel-eslint": "^8.0.3",
+    "babel-eslint": "^8.2.1",
     "babel-jest": "^22.0.0",
     "babel-preset-env": "^1.6.1",
     "babel-preset-stage-0": "^6.24.1",
