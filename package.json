@@ -1,6 +1,6 @@
 {
   "name": "hexlet-project02-by-rastler",
-  "version": "0.7.0",
+  "version": "0.7.1",
   "description": "Utility for training at hexlet.io",
   "main": "dist/index.js",
   "bin": {
@@ -16,7 +16,7 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Rastler/project-lvl2-s177.git"
-},
+  },
   "author": "Roman Averin",
   "license": "ISC",
   "dependencies": {
