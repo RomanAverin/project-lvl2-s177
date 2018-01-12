@@ -12,6 +12,8 @@ publish:
 	npm publish
 lint:
 	npm run eslint .
-test:
+watch:
 	npm run test -- --watch
+test:
+	npm test
 
