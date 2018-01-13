@@ -7,7 +7,7 @@ const renderPlain = (ast, parents = []) => {
     changed: (node, fullName) => `Property '${fullName}' was updated. From '${node.befor}' to '${node.after}'\n`,
     added: (node, fullName) => `Property '${fullName}' was added with ${_.isObject(node.after) ?
       'complex value\n' : `value: ${node.after}\n`}`,
-    nested: node => renderPlain(node.value, [...parents, node.name]),
+    nested: node => renderPlain(node.children, [...parents, node.name]),
   };
   return _.reduce(ast, (acc, node) => {
     const fullName = [...parents, node.name].join('.');

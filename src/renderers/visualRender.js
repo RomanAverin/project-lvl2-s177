@@ -16,7 +16,7 @@ const renderTree = (tree, tab = 0) => {
     removed: node => renderNode(node.name, node.befor, '-'),
     added: node => renderNode(node.name, node.after, '+'),
     unchanged: node => renderNode(node.name, node.befor),
-    nested: node => renderNode(node.name, renderTree(node.value, tab + 1), ' '),
+    nested: node => renderNode(node.name, renderTree(node.children, tab + 1), ' '),
   };
   const resultArr = tree.map((node) => {
     const visualizeFn = selectVisualizeFn[node.type];

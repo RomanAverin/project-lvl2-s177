@@ -43,7 +43,7 @@ const types = [
     type: 'nested',
     testing: ((befor, after, key) => _.has(befor, key) && _.has(after, key) &&
     _.isObject(befor[key]) && _.isObject(after[key])),
-    handle: (befor, after, fn) => ({ value: fn(befor, after) }),
+    handle: (befor, after, fn) => ({ children: fn(befor, after) }),
   },
 ];
 
@@ -51,9 +51,9 @@ const generateAst = (obj1, obj2) => {
   const keys = Object.keys({ ...obj1, ...obj2 });
   return keys.map((key) => {
     const { type, handle } = _.find(types, item => item.testing(obj1, obj2, key));
-    const { befor, after, value } = handle(obj1[key], obj2[key], generateAst);
+    const { befor, after, children } = handle(obj1[key], obj2[key], generateAst);
     return {
-      name: key, type, befor, after, value,
+      name: key, type, befor, after, children: children || [],
     };
   });
 };
