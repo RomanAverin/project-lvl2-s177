@@ -8,7 +8,7 @@
     "gendiff": "dist/bin/gendiff.js"
   },
   "scripts": {
-    "test": "NODE_OPTIONS=--experimental-vm-modules npx jest",
+    "test": "npx jest",
     "run": "src/bin/gendiff.js",
     "prepublishOnly": "npm run build",
     "eslint": "eslint"
@@ -16,6 +16,10 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Rastler/project-lvl2-s177.git"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "transform": {}
   },
   "author": "Roman Averin",
   "license": "ISC",
