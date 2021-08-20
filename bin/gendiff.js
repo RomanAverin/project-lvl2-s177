@@ -1,12 +1,18 @@
 #!/usr/bin/env node
 
 import program from 'commander';
-import gendiff from '../';
-import version from '../../package.json';
+import { readFile } from 'fs/promises';
 
+import gendiff from '../src/index.js';
+
+const packageFile = JSON.parse(
+  await readFile(
+    new URL('../package.json', import.meta.url)
+)
+);
 
 program
-  .version(version)
+  .version(packageFile.version)
   .description('Compares two configuration files and shows a difference.')
   .option('-f, --format [type]', 'Output format', 'visual')
   .arguments('<firstConfig> <secondConfig>')

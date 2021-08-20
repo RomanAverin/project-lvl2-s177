@@ -1,13 +1,11 @@
 install:
 	npm install
 usage:
-	npm run babel-node -- src/bin/gendiff.js --help
+	node bin/gendiff.js --help
 run:
-	npm run babel-node -- src/bin/gendiff.js
+	node bin/gendiff.js
 test-run:
-	npm run babel-node -- src/bin/gendiff.js -f json __tests__/__fixtures__/befor.json __tests__/__fixtures__/after.json
-build:
-	npm run build
+	node bin/gendiff.js -f json __tests__/__fixtures__/befor.json __tests__/__fixtures__/after.json
 publish:
 	npm publish
 lint:

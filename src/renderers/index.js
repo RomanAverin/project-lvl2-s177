@@ -1,10 +1,10 @@
-import renderVisual from './visualRender';
-import renderPlain from './plainRender';
-import renderJSON from './jsonRender';
+import renderVisual from './visualRender.js';
+import renderPlain from './plainRender.js';
+import renderJSON from './jsonRender.js';
 
 const renders = {
   plain: renderPlain,
   visual: renderVisual,
   json: renderJSON,
 };
-export default type => renders[type];
+export default (type) => renders[type];
