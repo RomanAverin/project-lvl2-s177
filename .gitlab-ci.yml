@@ -1,5 +1,5 @@
 image: node:latest
-tag: remote
+trigger: remote
 
 stages:          # List of stages for jobs, and their order of execution
   - test
