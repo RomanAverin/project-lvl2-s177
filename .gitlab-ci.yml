@@ -1,5 +1,8 @@
 image: node:latest
 
+before_script:
+  - npm install
+
 stages:          # List of stages for jobs, and their order of execution
   - test
 
