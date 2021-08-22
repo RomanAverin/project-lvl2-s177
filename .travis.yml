@@ -1,8 +1,0 @@
----
-
-language: node_js
-
-nodejs: 
-  - "node"
-  
-script: make lint test
